@@ -100,18 +100,33 @@ def process_video(video_path, api_key, model_name=None, base_url=None):
     try:
         frames = extract_frames(video_path)
         frames_base64 = [image_to_base64(f) for f in frames]
-        return call_gpt(frames_base64, video_prefix, api_key=api_key, model_name=model_name, base_url=base_url)
+        return call_gpt(
+            frames_base64,
+            video_prefix,
+            api_key=api_key,
+            model_name=model_name,
+            base_url=base_url,
+        )
     except Exception as e:
         print(f"Failed processing {video_path}: {e}")
         return video_prefix, "error"
 
 
-def process_video_threaded(file_path, result_dict, api_key, model_name=None, base_url=None):
+def process_video_threaded(
+    file_path, result_dict, api_key, model_name=None, base_url=None
+):
     video_key, score = process_video(file_path, api_key, model_name, base_url)
     result_dict[video_key] = score
 
 
-def process_folder(input_video_folder, output_json_file, num_workers, api_key, model_name=None, base_url=None):
+def process_folder(
+    input_video_folder,
+    output_json_file,
+    num_workers,
+    api_key,
+    model_name=None,
+    base_url=None,
+):
     print(f"Processing folder: {input_video_folder}")
 
     video_files = [f for f in os.listdir(input_video_folder) if f.endswith(".mp4")]
@@ -124,7 +139,14 @@ def process_folder(input_video_folder, output_json_file, num_workers, api_key, m
         ):
             full_path = os.path.join(input_video_folder, f)
             futures.append(
-                executor.submit(process_video_threaded, full_path, result_dict, api_key, model_name, base_url)
+                executor.submit(
+                    process_video_threaded,
+                    full_path,
+                    result_dict,
+                    api_key,
+                    model_name,
+                    base_url,
+                )
             )
 
         for future in as_completed(futures):
@@ -167,7 +189,14 @@ def main():
 
     for i in [1, 2, 3]:
         output_json_file = os.path.join(output_json_folder, f"naturalscore_{i}.json")
-        process_folder(input_video_folder, output_json_file, num_workers, api_key, model_name, base_url)
+        process_folder(
+            input_video_folder,
+            output_json_file,
+            num_workers,
+            api_key,
+            model_name,
+            base_url,
+        )
 
     print(f"All results have been saved to {output_json_folder}")
 

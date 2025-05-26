@@ -1,15 +1,53 @@
-import base64
-import requests
+MODEL_INFO = ["Model", "Venue", "Evaluated by"]
 
-MODEL_INFO = ["Model", "Venue"]
+ALL_RESULTS = [
+    "TotalScore↑",
+    "Aesthetics↑",
+    "Motion↑",
+    "FaceSim↑",
+    "GmeScore↑",
+    "NexusScore↑",
+    "NaturalScore↑",
+]
 
-ALL_RESULTS = ["TotalScore↑","Aesthetics↑", "Motion↑", "FaceSim↑", "GmeScore↑", "NexusScore↑", "NaturalScore↑"]
+OPEN_DOMAIN_RESULTS = [
+    "TotalScore↑",
+    "Aesthetics↑",
+    "Motion↑",
+    "FaceSim↑",
+    "GmeScore↑",
+    "NexusScore↑",
+    "NaturalScore↑",
+]
+HUMAN_DOMAIN_RESULTS = [
+    "TotalScore↑",
+    "Aesthetics↑",
+    "Motion↑",
+    "FaceSim↑",
+    "GmeScore↑",
+    "NaturalScore↑",
+]
+SINGLE_DOMAIN_RESULTS = [
+    "TotalScore↑",
+    "Aesthetics↑",
+    "Motion↑",
+    "FaceSim↑",
+    "GmeScore↑",
+    "NexusScore↑",
+    "NaturalScore↑",
+]
 
-OPEN_DOMAIN_RESULTS = ["TotalScore↑","Aesthetics↑", "Motion↑", "FaceSim↑", "GmeScore↑", "NexusScore↑", "NaturalScore↑"]
-HUMAN_DOMAIN_RESULTS = ["TotalScore↑","Aesthetics↑", "Motion↑", "FaceSim↑", "GmeScore↑", "NaturalScore↑"]
-SINGLE_DOMAIN_RESULTS = ["TotalScore↑","Aesthetics↑", "Motion↑", "FaceSim↑", "GmeScore↑", "NexusScore↑", "NaturalScore↑"]
-
-NEW_DATA_TITLE_TYPE = ["markdown", 'markdown', "number", "number", "number", "number", "number", "number", "number"]
+NEW_DATA_TITLE_TYPE = [
+    "markdown",
+    "markdown",
+    "number",
+    "number",
+    "number",
+    "number",
+    "number",
+    "number",
+    "number",
+]
 
 CSV_DIR_OPEN_DOMAIN_RESULTS = "./file/results_Open-Domain.csv"
 CSV_DIR_HUMAN_DOMAIN_RESULTS = "./file/results_Human-Domain.csv"
@@ -18,7 +56,7 @@ CSV_DIR_SINGLE_DOMAIN_RESULTS = "./file/results_Single-Domain.csv"
 COLUMN_NAMES = MODEL_INFO + ALL_RESULTS
 COLUMN_NAMES_HUMAN = MODEL_INFO + HUMAN_DOMAIN_RESULTS
 
-LEADERBORAD_INTRODUCTION = f"""
+LEADERBORAD_INTRODUCTION = """
     # OpenS2V-Eval Leaderboard
     
     Welcome to the leaderboard of the OpenS2V-Eval!

@@ -1,6 +1,6 @@
 .PHONY: quality style
 
-check_dirs := ./data_process ./eval ./__assets__
+check_dirs := ./data_process ./eval ./__assets__ ./leaderboard
 
 exclude_dirs := groundingsam2,lama_with_maskdino,third_party
 

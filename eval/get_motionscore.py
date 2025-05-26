@@ -7,6 +7,7 @@ import json
 import decord
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+
 def sample_video_frames(video_path, num_frames=None):
     vr = decord.VideoReader(video_path)
     total_frames = len(vr)
@@ -154,10 +155,7 @@ def main():
     os.makedirs(output_json_folder, exist_ok=True)
 
     all_results = {}
-    video_files = [
-        f for f in os.listdir(input_video_folder)
-        if f.endswith(".mp4")
-    ]
+    video_files = [f for f in os.listdir(input_video_folder) if f.endswith(".mp4")]
 
     def worker(filename):
         video_path = os.path.join(input_video_folder, filename)
