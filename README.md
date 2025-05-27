@@ -220,8 +220,8 @@ If you find our paper and code useful in your research, please consider giving a
 ```BibTeX
 @article{yuan2025opens2v,
   title={OpenS2V-Nexus: A Detailed Benchmark and Million-Scale Dataset for Subject-to-Video Generation},
-  author={Yuan, Shenghai and He, Xianyi and Deng, Yufan and Ye, Yang and Huang, Jinfa and Ma Chongyang and Luo, Jiebo and Yuan, Li},
-  journal={arXiv preprint arXiv: 2505.20292},
+  author={Yuan, Shenghai and He, Xianyi and Deng, Yufan and Ye, Yang and Huang, Jinfa and Ma, Chongyang and Luo, Jiebo and Yuan, Li},
+  journal={arXiv preprint arXiv:2505.20292},
   year={2025}
 }
 ```
