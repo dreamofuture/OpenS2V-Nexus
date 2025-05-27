@@ -70,20 +70,30 @@ LEADERBORAD_INTRODUCTION = """
 
 SUBMIT_INTRODUCTION = """# Submission Guidelines
     1. Fill in *'Model Name'* if it is your first time to submit your result **or** Fill in *'Revision Model Name'* if you want to update your result.
-    2. Fill in your home page to *'Model Link'*.
+    2. Fill in your home page to *'Model Link'* and your team name to *'Your Team Name'*.
     3. After evaluation, follow the guidance in the [github repository](https://github.com/PKU-YuanGroup/OpenS2V-Nexus) to obtain `model_name.json` and upload it here.
     4. Click the *'Submit Eval'* button.
     5. Click *'Refresh'* to obtain the updated leaderboard.
 """
 
-TABLE_INTRODUCTION = """In the table below, we summarize each task performance of all the models.
-        We use Aesthetic, Motion, FaceSim, GmeScore, NexusScore, and NaturalScore as the primary evaluation metric for each tasks.
+TABLE_INTRODUCTION = """In the table below, we use six dimensions as the primary evaluation metrics for each task.
+        1. Visual Quality: Aesthetics.
+        2. Motion Amplitude: Motion.
+        3. Text Relevance: GmeScore.
+        4. Subject Consistency: FaceSim and NexusScore.
     """
 
-TABLE_INTRODUCTION_HUMAN = """In the table below, we summarize each task performance of all the models.
-        We use Aesthetic, Motion, FaceSim, GmeScore, and NaturalScore as the primary evaluation metric for each tasks.
+TABLE_INTRODUCTION_HUMAN = """In the table below, we use six dimensions as the primary evaluation metrics for each task.
+        1. Visual Quality: Aesthetics.
+        2. Motion Amplitude: Motion.
+        3. Text Relevance: GmeScore.
+        4. Subject Consistency: FaceSim.
     """
 
 CITATION_BUTTON_LABEL = "Copy the following snippet to cite these results"
-CITATION_BUTTON_TEXT = r"""@article{
+CITATION_BUTTON_TEXT = r"""@article{yuan2025opens2v,
+  title={OpenS2V-Nexus: A Detailed Benchmark and Million-Scale Dataset for Subject-to-Video Generation},
+  author={Yuan, Shenghai and He, Xianyi and Deng, Yufan and Ye, Yang and Huang, Jinfa and Ma, Chongyang and Luo, Jiebo and Yuan, Li},
+  journal={arXiv preprint arXiv:2505.20292},
+  year={2025}
 }"""
