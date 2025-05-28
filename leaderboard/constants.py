@@ -93,7 +93,7 @@ TABLE_INTRODUCTION_HUMAN = """In the table below, we use six dimensions as the p
 CITATION_BUTTON_LABEL = "Copy the following snippet to cite these results"
 CITATION_BUTTON_TEXT = r"""@article{yuan2025opens2v,
   title={OpenS2V-Nexus: A Detailed Benchmark and Million-Scale Dataset for Subject-to-Video Generation},
-  author={Yuan, Shenghai and He, Xianyi and Deng, Yufan and Ye, Yang and Huang, Jinfa and Ma, Chongyang and Luo, Jiebo and Yuan, Li},
+  author={Yuan, Shenghai and He, Xianyi and Deng, Yufan and Ye, Yang and Huang, Jinfa and Luo, Jiebo and Yuan, Li},
   journal={arXiv preprint arXiv:2505.20292},
   year={2025}
 }"""

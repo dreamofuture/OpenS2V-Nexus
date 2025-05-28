@@ -8,3 +8,4 @@ Model,Venue,Evaluated by,TotalScore↑,Aesthetics↑,Motion↑,FaceSim↑,GmeSco
 [Phantom-1.3B](https://github.com/Phantom-video/Phantom),Open-Source,OpenS2V Team,49.95%,42.98%,19.30%,44.03%,65.61%,37.78%,76.00%
 [SkyReels-A2-P14B](https://github.com/SkyworkAI/SkyReels-V2),Open-Source,OpenS2V Team,51.64%,33.83%,21.60%,54.42%,61.93%,48.63%,70.60%
 [HunyuanCustom](https://github.com/Tencent-Hunyuan/HunyuanCustom),Open-Source,OpenS2V Team,51.64%,34.08%,26.83%,55.93%,54.31%,50.75%,68.66%
+[Phantom-14B](https://github.com/Phantom-video/Phantom),Open-Source,OpenS2V Team,53.17%,47.46%,41.55%,51.82%,70.07%,35.35%,69.35%
