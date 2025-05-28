@@ -9,7 +9,7 @@
 <h5 align="center">
 
 [![hf_space](https://img.shields.io/badge/🤗-Leaderboard-blue.svg)](https://huggingface.co/spaces/BestWishYsh/OpenS2V-Eval)
-<!-- [![hf_paper](https://img.shields.io/badge/🤗-Paper%20In%20HF-red.svg)](https://huggingface.co/papers/2505.20292) -->
+[![hf_paper](https://img.shields.io/badge/🤗-Paper%20In%20HF-red.svg)](https://huggingface.co/papers/2505.20292)
 [![arXiv](https://img.shields.io/badge/Arxiv-2505.20292-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2505.20292) 
 [![Home Page](https://img.shields.io/badge/Project-<Website>-blue.svg)](https://pku-yuangroup.github.io/OpenS2V-Nexus) 
 [![Dataset](https://img.shields.io/badge/Dataset-OpenS2V_5M-green)](https://huggingface.co/datasets/BestWishYsh/OpenS2V-5M)
