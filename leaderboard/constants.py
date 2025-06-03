@@ -81,6 +81,7 @@ TABLE_INTRODUCTION = """In the table below, we use six dimensions as the primary
         2. Motion Amplitude: Motion.
         3. Text Relevance: GmeScore.
         4. Subject Consistency: FaceSim and NexusScore.
+        5. Subject Naturalness: NaturalScore.
     """
 
 TABLE_INTRODUCTION_HUMAN = """In the table below, we use six dimensions as the primary evaluation metrics for each task.
@@ -88,6 +89,7 @@ TABLE_INTRODUCTION_HUMAN = """In the table below, we use six dimensions as the p
         2. Motion Amplitude: Motion.
         3. Text Relevance: GmeScore.
         4. Subject Consistency: FaceSim.
+        5. Naturalness: NaturalScore.
     """
 
 CITATION_BUTTON_LABEL = "Copy the following snippet to cite these results"
