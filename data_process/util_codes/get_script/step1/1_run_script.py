@@ -19,8 +19,12 @@ def generate_bash_scripts(
     for machine_num in range(num_machines):
         bash_script = ""
         for dataset_name in dataset_names:
-            bash_script += f"INPUT_VIDEO_ROOT={os.path.join(input_video_root, dataset_name)}\n"
-            bash_script += f"OUTPUT_JSON_FOLDER={os.path.join(output_json_folder, dataset_name)}\n"
+            bash_script += (
+                f"INPUT_VIDEO_ROOT={os.path.join(input_video_root, dataset_name)}\n"
+            )
+            bash_script += (
+                f"OUTPUT_JSON_FOLDER={os.path.join(output_json_folder, dataset_name)}\n"
+            )
             bash_script += f"INPUT_VIDEO_JSON_DIR={os.path.join(input_video_json_dir, dataset_name)}\n\n"
 
             start_task = machine_num * tasks_per_machine
@@ -28,7 +32,9 @@ def generate_bash_scripts(
             bash_script += f"for i in {{{start_task}..{end_task}}}; do\n"
 
             bash_script += (
-                '    INPUT_VIDEO_JSON="${INPUT_VIDEO_JSON_DIR}/' + f"{dataset_name}" + '_part$((i+1)).json"\n'
+                '    INPUT_VIDEO_JSON="${INPUT_VIDEO_JSON_DIR}/'
+                + f"{dataset_name}"
+                + '_part$((i+1)).json"\n'
             )
             bash_script += f"    CUDA_VISIBLE_DEVICES=$((i % {num_gpus})) python step1_get_bbox.py --input_video_root ${{INPUT_VIDEO_ROOT}} --input_video_json ${{INPUT_VIDEO_JSON}} --output_json_folder ${{OUTPUT_JSON_FOLDER}} & \\\n"
 

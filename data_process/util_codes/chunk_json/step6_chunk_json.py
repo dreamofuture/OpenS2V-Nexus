@@ -95,7 +95,9 @@ def main():
         default="../../demo_result/step6/cross-frames-images/chunk_input_json",
     )
     parser.add_argument(
-        "--resume_dir", type=str, default="../../demo_result/step6/cross-frames-images/final_output"
+        "--resume_dir",
+        type=str,
+        default="../../demo_result/step6/cross-frames-images/final_output",
     )
     parser.add_argument("--total_part", type=int, default=1)
     parser.add_argument("--num_workers", type=int, default=64)

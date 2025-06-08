@@ -28,7 +28,8 @@ def generate_bash_scripts(
         bash_script += f"for i in {{{start_task}..{end_task}}}; do\n"
 
         bash_script += (
-            '    INPUT_CLUSTER_JSON="${INPUT_CLUSTER_JSON_FOLDER}/' + 'cluster_videos_part$((i+1)).json"\n'
+            '    INPUT_CLUSTER_JSON="${INPUT_CLUSTER_JSON_FOLDER}/'
+            + 'cluster_videos_part$((i+1)).json"\n'
         )
         bash_script += f"    CUDA_VISIBLE_DEVICES=$((i % {num_gpus})) python step6-2_get_cross-frame.py --input_video_root ${{INPUT_VIDEO_ROOT}} --input_cluster_json ${{INPUT_CLUSTER_JSON}} --input_video_json_folder ${{INPUT_VIDEO_JSON_FOLDER}} --output_json_folder ${{OUTPUT_JSON_FOLDER}} & \\\n"
 

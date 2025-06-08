@@ -522,7 +522,8 @@ with block:
                         value="Open-Source",
                     )
                     team_name_textbox = gr.Textbox(
-                        label="Your Team Name (If left blank, it will be user upload))", placeholder="User Upload"
+                        label="Your Team Name (If left blank, it will be user upload))",
+                        placeholder="User Upload",
                     )
                     model_link = gr.Textbox(
                         label="Model Link",
