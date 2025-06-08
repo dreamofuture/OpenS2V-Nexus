@@ -6,7 +6,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def should_include_item(item, resume_dir):
     key, value = item
-    file_name = key + "_step5.json"
+    file_name = key + "_step6.json"
     file_path = os.path.join(resume_dir, file_name)
     if not os.path.exists(file_path):
         return key, value
@@ -87,15 +87,15 @@ def main():
     parser.add_argument(
         "--input_video_json",
         type=str,
-        default="../../demo_result/step4/cross-frames-images/cluster_videos.json",
+        default="../../demo_result/step6/cross-frames-images/cluster_videos.json",
     )
     parser.add_argument(
         "--output_chunk_json_folder",
         type=str,
-        default="../../demo_result/step5/cross-frames-images/chunk_input_json",
+        default="../../demo_result/step6/cross-frames-images/chunk_input_json",
     )
     parser.add_argument(
-        "--resume_dir", type=str, default="../../demo_result/step5/cross-frames-images/final_output"
+        "--resume_dir", type=str, default="../../demo_result/step6/cross-frames-images/final_output"
     )
     parser.add_argument("--total_part", type=int, default=1)
     parser.add_argument("--num_workers", type=int, default=64)

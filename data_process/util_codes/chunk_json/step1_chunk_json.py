@@ -89,15 +89,15 @@ def main():
     parser.add_argument(
         "--input_video_json",
         type=str,
-        default="0_demo_output/step0/merge_input_json/dataset1.json",
+        default="../../demo_result/step0/merge_final_json/dataset1.json",
     )
     parser.add_argument(
         "--output_chunk_json_folder",
         type=str,
-        default="0_demo_output/step1/chunk_input_json/dataset1",
+        default="../../step1/chunk_input_json/dataset1",
     )
     parser.add_argument(
-        "--resume_dir", type=str, default="0_demo_output/step1/final_output/dataset1"
+        "--resume_dir", type=str, default="../../step1/final_output/dataset1"
     )
     parser.add_argument("--total_part", type=int, default=1)
     parser.add_argument("--num_workers", type=int, default=1)

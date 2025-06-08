@@ -168,7 +168,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--input_json_folder", type=str, default="0_demo_input/jsons")
     parser.add_argument(
-        "--output_json_file", type=str, default="0_demo_output/step0/merge.json"
+        "--output_json_file", type=str, default="../../demo_result/step0/merge_final_json/dataset1.json"
     )
     parser.add_argument("--num_workers", type=int, default=1)
     return parser.parse_args()
