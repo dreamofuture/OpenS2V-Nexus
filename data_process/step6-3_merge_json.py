@@ -51,12 +51,12 @@ def parse_args():
     parser.add_argument(
         "--input_json_folder",
         type=str,
-        default="demo_result/step6/cross-frames-images/final_output",
+        default="demo_result/step6/cross-frames-pairs/final_output",
     )
     parser.add_argument(
         "--output_json_file",
         type=str,
-        default="demo_result/step6/cross-frames-images/cross_frames_pairs.json",
+        default="demo_result/step6/cross-frames-pairs/cross_frames_pairs.json",
     )
     parser.add_argument("--num_workers", type=int, default=1)
     return parser.parse_args()

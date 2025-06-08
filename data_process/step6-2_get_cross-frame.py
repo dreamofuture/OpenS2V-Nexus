@@ -56,31 +56,26 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--input_cluster_json",
-        default="demo_result/step6/cluster_videos.json",
+        default="demo_result/step6/cross-frames-pairs/cluster_videos.json",
     )
     parser.add_argument(
-        "--input_video_json",
-        default="demo_result/step5/merge_final_json/dataset1_cluster.json",
+        "--input_video_json_folder",
+        default="demo_result/step5/final_output",
     )
     parser.add_argument(
         "--input_video_root",
         type=str,
-        default="demo_result/step0/videos/dataset1",
+        default="demo_result/step0/videos",
     )
     parser.add_argument(
         "--output_json_folder",
         type=str,
-        default="demo_result/step6/cross-frames-images/final_output/",
+        default="demo_result/step6/cross-frames-pairs/final_output/",
     )
     parser.add_argument(
         "--gme_score_model_path",
         type=str,
-        default="Alibaba-NLP/gme-Qwen2-VL-7B-Instruct",
-    )
-    parser.add_argument(
-        "--num_workers",
-        type=int,
-        default=32,
+        default="/mnt/workspace/checkpoints/Alibaba-NLP/gme-Qwen2-VL-7B-Instruct",
     )
     return parser.parse_args()
 
@@ -90,7 +85,7 @@ def main():
 
     input_cluster_json = args.input_cluster_json
     input_video_root = args.input_video_root
-    input_video_json = args.input_video_json
+    input_video_json_folder = args.input_video_json_folder
     output_json_folder = args.output_json_folder
     gme_score_model_path = args.gme_score_model_path
 
@@ -103,9 +98,6 @@ def main():
         cluster_data = json.load(f)
     cluster_data_items = list(cluster_data.items())
 
-    with open(input_video_json, "r") as f:
-        all_data = json.load(f)
-
     gme_model = GmeQwen2VL(gme_score_model_path, attn_model="flash_attention_2")
 
     for key, data in tqdm(
@@ -114,24 +106,44 @@ def main():
         temp_json_path = os.path.join(output_json_folder, f"{key}.json")
         if os.path.exists(temp_json_path):
             print(f"already process {key}")
-            return
+            continue
         temp_match_data = []
         for cur_idx in range(len(data)):
-            cur_data = all_data[data[cur_idx]]
+            cur_idx_parts = data[cur_idx].split("/")
+            cur_mask_json_path = (
+                os.path.join(
+                    input_video_json_folder, cur_idx_parts[0], cur_idx_parts[1]
+                )
+                + ".json"
+            )
+            with open(cur_mask_json_path, "r") as f:
+                cur_data = json.load(f)
             cur_frame_idx = cur_data["annotation"]["ann_frame_data"]["ann_frame_idx"]
             cur_pil_image = extract_video_frame(
-                input_video_root, cur_data, cur_frame_idx
+                os.path.join(input_video_root, cur_idx_parts[0]),
+                cur_data,
+                cur_frame_idx,
             )
             cur_img_width = cur_pil_image.size[0]
             cur_img_height = cur_pil_image.size[1]
 
             for aft_idx in range(cur_idx + 1, len(data)):
-                aft_data = all_data[data[aft_idx]]
+                aft_idx_parts = data[aft_idx].split("/")
+                aft_mask_json_path = (
+                    os.path.join(
+                        input_video_json_folder, aft_idx_parts[0], aft_idx_parts[1]
+                    )
+                    + ".json"
+                )
+                with open(aft_mask_json_path, "r") as f:
+                    aft_data = json.load(f)
                 aft_frame_idx = aft_data["annotation"]["ann_frame_data"][
                     "ann_frame_idx"
                 ]
                 aft_pil_image = extract_video_frame(
-                    input_video_root, aft_data, aft_frame_idx
+                    os.path.join(input_video_root, aft_idx_parts[0]),
+                    aft_data,
+                    aft_frame_idx,
                 )
                 aft_img_width = aft_pil_image.size[0]
                 aft_img_height = aft_pil_image.size[1]
@@ -202,6 +214,8 @@ def main():
                                 temp_data = {
                                     "cur_id": data[cur_idx],
                                     "aft_id": data[aft_idx],
+                                    "cur_class_id": cur_id,
+                                    "aft_class_id": aft_id,
                                     "cur_class_name": cur_class_name,
                                     "aft_class_name": aft_class_name,
                                     "text_similarity": text_similarity.item(),

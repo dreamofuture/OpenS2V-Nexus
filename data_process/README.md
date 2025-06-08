@@ -1,11 +1,12 @@
 # <u>Data Processing Pipeline</u> by *OpenS2V-5M*
-This repo describes how to process your own video like [OpenS2V-5M](https://huggingface.co/datasets/BestWishYsh/OpenS2V-5M) datasets in the [OpenS2V-Nexus](https://arxiv.org) paper.
+This repo describes how to process your own video like [OpenS2V-5M](https://huggingface.co/datasets/BestWishYsh/OpenS2V-5M) datasets in the [OpenS2V-Nexus](https://arxiv.org) paper. Alternatively, If you want to directly use OpenS2V-5M, please refer to [this guide](https://huggingface.co/datasets/BestWishYsh/OpenS2V-5M#%F0%9F%93%A3-usage).
 
 ## 🎉 Overview
 
 <div align=center>
 <img src="https://github.com/user-attachments/assets/d695ed59-cbf5-4303-883b-626b116441e3">
 </div>
+
 ## ⚙️ Requirements and Installation
 
 We recommend the requirements as follows. You should first follow the [instructions](https://github.com/PKU-YuanGroup/OpenS2V-Nexus/?tab=readme-ov-file#%EF%B8%8F-requirements-and-installation) to install the *Base Environment* and obtain the *Base Checkpoints*.

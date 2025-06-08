@@ -59,7 +59,7 @@ def parse_args():
     parser.add_argument(
         "--output_image_folder",
         type=str,
-        default="demo_result/step6/gpt-frames_images",
+        default="demo_result/step6/gpt-frames-pairs",
     )
     parser.add_argument(
         "--num_workers",

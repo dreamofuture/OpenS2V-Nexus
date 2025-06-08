@@ -14,7 +14,7 @@ def parse_args():
     parser.add_argument(
         "--output_json_file",
         type=str,
-        default="demo_result/step6/cross-frames-images/cluster_videos.json",
+        default="demo_result/step6/cross-frames-pairs/cluster_videos.json",
     )
     return parser.parse_args()
 
@@ -41,7 +41,9 @@ def main():
                 cluster_id = video_name.split("_part")[0]
             if cluster_id not in clustered_data:
                 clustered_data[cluster_id] = set()
-            clustered_data[cluster_id].add(video_name)
+            clustered_data[cluster_id].add(
+                os.path.join(json_file.replace(".json", ""), video_name)
+            )
 
     clustered_data = {k: list(v) for k, v in clustered_data.items() if len(v) > 1}
     cluster_sizes = [len(videos) for videos in clustered_data.values()]
