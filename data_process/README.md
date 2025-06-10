@@ -1,5 +1,5 @@
 # <u>Data Processing Pipeline</u> by *OpenS2V-5M*
-This repo describes how to process your own video like [OpenS2V-5M](https://huggingface.co/datasets/BestWishYsh/OpenS2V-5M) datasets in the [OpenS2V-Nexus](https://arxiv.org) paper. Alternatively, If you want to directly use OpenS2V-5M, please refer to [this guide](https://huggingface.co/datasets/BestWishYsh/OpenS2V-5M#%F0%9F%93%A3-usage).
+This repo describes how to process your own video like [OpenS2V-5M](https://huggingface.co/datasets/BestWishYsh/OpenS2V-5M) datasets in the [OpenS2V-Nexus](https://arxiv.org) paper. Alternatively, if you want to directly use OpenS2V-5M, please refer to [this guide](https://huggingface.co/datasets/BestWishYsh/OpenS2V-5M#%F0%9F%93%A3-usage).
 
 ## 🎉 Overview
 
