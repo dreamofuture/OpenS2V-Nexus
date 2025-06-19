@@ -243,6 +243,10 @@ python step6-3_merge_json.py
 python step6-4_get_gpt-frame.py
 ```
 
+## 🗝️ Demo Dataloader
+
+Regarding how to use OpenS2V-5M during the training phase, we provide a demo dataloader [here](https://github.com/PKU-YuanGroup/OpenS2V-Nexus/tree/main/data_process/demo_dataloader.py).
+
 ## 🔒 Limitation
 
 - Although the current data pipeline can generate high-quality Regular Data and Nexus Data suitable for Subject-to-Video generation, it incurs substantial computational costs. We will continue to optimize the code in the future.
