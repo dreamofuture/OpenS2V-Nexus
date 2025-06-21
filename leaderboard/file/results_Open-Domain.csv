@@ -8,3 +8,4 @@ Model,Venue,Evaluated by,TotalScore↑,Aesthetics↑,Motion↑,FaceSim↑,GmeSco
 [Phantom-1.3B](https://github.com/Phantom-video/Phantom),Open-Source,OpenS2V Team,50.71%,46.67%,14.29%,48.55%,69.43%,42.44%,70.26%
 [SkyReels-A2-P14B](https://github.com/SkyworkAI/SkyReels-V2),Open-Source,OpenS2V Team,49.61%,39.40%,25.60%,45.95%,64.54%,43.77%,67.22%
 [Phantom-14B](https://github.com/Phantom-video/Phantom),Open-Source,OpenS2V Team,52.32%,46.39%,33.42%,51.48%,70.65%,37.43%,68.66%
+[MAGREF-480P](https://github.com/MAGREF-Video/MAGREF),Open-Source,OpenS2V Team,47.93%,45.02%,21.81%,30.83%,70.47%,43.04%,69.49%

@@ -17,3 +17,4 @@ Model,Venue,Evaluated by,TotalScore↑,Aesthetics↑,Motion↑,FaceSim↑,GmeSco
 [ID-Animator](https://github.com/ID-Animator/ID-Animator),Open-Source,OpenS2V Team,43.37%,42.03%,33.54%,31.56%,52.91%,54.03%
 [Phantom-14B](https://github.com/Phantom-video/Phantom),Open-Source,OpenS2V Team,58.69%,49.14%,41.24%,55.02%,72.55%,68.33%
 [Concat-ID-Wan-AdaLN](https://github.com/ML-GSAI/Concat-ID),Open-Source,OpenS2V Team,53.18%,43.13%,17.19%,50.05%,71.90%,69.44%
+[MAGREF-480P](https://github.com/MAGREF-Video/MAGREF),Open-Source,OpenS2V Team,50.41%,51.20%,14.76%,32.87%,70.88%,72.22%
