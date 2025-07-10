@@ -1,6 +1,9 @@
 # <u>Data Processing Pipeline</u> by *OpenS2V-5M*
 This repo describes how to process your own video like [OpenS2V-5M](https://huggingface.co/datasets/BestWishYsh/OpenS2V-5M) datasets in the [OpenS2V-Nexus](https://arxiv.org) paper. Alternatively, if you want to directly use OpenS2V-5M, please refer to [this guide](https://huggingface.co/datasets/BestWishYsh/OpenS2V-5M#%F0%9F%93%A3-usage).
 
+We provide some resources that may help you: [Tutorial 1](https://github.com/PKU-YuanGroup/OpenS2V-Nexus/blob/main/data_process/README.md), [Tutorial 2](https://huggingface.co/datasets/BestWishYsh/OpenS2V-5M), [Demo Regular-Pairs Json](https://github.com/PKU-YuanGroup/OpenS2V-Nexus/blob/main/data_process/demo_result/step5/merge_final_json/dataset1.json), [Demo Cross-Pairs Json](https://github.com/PKU-YuanGroup/OpenS2V-Nexus/blob/main/data_process/demo_result/step6/cross-frames-pairs/final_output/gm1252760410-365677148.json),
+[Demo Dataloader](https://github.com/PKU-YuanGroup/OpenS2V-Nexus/blob/main/data_process/demo_dataloader.py).
+
 ## 🎉 Overview
 
 <div align=center>
