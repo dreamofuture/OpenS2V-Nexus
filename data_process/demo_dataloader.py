@@ -240,7 +240,7 @@ class OpenS2VDataset(Dataset):
         )
         vr = VideoReader(video_path, num_threads=2)
 
-        # crop & cut
+        # crop (remove watermark) & cut (remove transition)
         s_x, e_x, s_y, e_y = item["metadata"]["crop"]
         start_frame = item["metadata"]["face_cut"][0]
         end_frame = item["metadata"]["face_cut"][1]
