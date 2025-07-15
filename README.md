@@ -53,6 +53,7 @@ This repository is the official implementation of <strong>OpenS2V-Nexus</strong>
 ## 📣 News
 
 * ⏳⏳⏳ Evaluating more models and updating the [![hf_space](https://img.shields.io/badge/🤗-Leaderboard-blue.svg)](https://huggingface.co/spaces/BestWishYsh/OpenS2V-Eval). PRs are welcome!
+* `[2025.07.01]`  🎉 Thanks to our amazing community — the [OpenS2V-5M](https://huggingface.co/datasets/BestWishYsh/OpenS2V-5M) dataset has reached ~40,000 downloads on Hugging Face in just one month! 
 * `[2025.06.21]`  🏃‍♂️ We add the evaluation results for [MAGREF-480P](https://github.com/MAGREF-Video/MAGREF); click [here](https://huggingface.co/spaces/BestWishYsh/OpenS2V-Eval) and [here](https://huggingface.co/datasets/BestWishYsh/OpenS2V-Eval/tree/main/Results) for details.
 * `[2025.06.19]`  🔥 The preprocessed *Cross-Frame Pairs* is now available on [Hugging Face](https://huggingface.co/datasets/BestWishYsh/OpenS2V-5M/tree/main/Jsons/cross_video_pairs), eliminating the need for online processing with this [code](https://github.com/PKU-YuanGroup/OpenS2V-Nexus/blob/main/data_process/step6-2_get_cross-frame.py) during training. We also provide a demo dataloader [here](https://github.com/PKU-YuanGroup/OpenS2V-Nexus/blob/main/data_process/demo_dataloader.py) demonstrating how to use OpenS2V-5M during the training phase.
 * `[2025.05.31]`  🏃‍♂️ We add the evaluation results for [Concat-ID-Wan-AdaLN](https://github.com/ML-GSAI/Concat-ID); click [here](https://huggingface.co/spaces/BestWishYsh/OpenS2V-Eval) and [here](https://huggingface.co/datasets/BestWishYsh/OpenS2V-Eval/tree/main/Results) for details.
@@ -75,7 +76,7 @@ This repository is the official implementation of <strong>OpenS2V-Nexus</strong>
 * [ConsisID-Bench](https://huggingface.co/datasets/BestWishYsh/ConsisID-preview-Data/tree/main/eval): including 150 *human-domain* subject images and 90 text prompts, respectively.
 * [ConsisID-Preview-Data](https://huggingface.co/datasets/BestWishYsh/ConsisID-preview-Data): including **32K** *human-domain* high-quality subject-text-video triples.
 
-## 😍 Inhouse Model Gallery 
+## 😍 In-house Model Gallery 
 This model (Ours‡) was trained on a subset of OpenS2V-5M, using about 0.3M high-quality data.
 <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
   <tr>
