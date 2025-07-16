@@ -23,30 +23,12 @@ def extract_useful_frames(bbox_infos, min_valid_frames=81, tolerance=5):
     current_segment = []
     non_face_count = 0
 
-    for frame_num in range(len(data)):
-        if str(frame_num) in data and data[str(frame_num)]["face"]:
-            face_boxes = data[str(frame_num)]["face"]
-            if is_face_large_enough_v2(face_boxes):
-                current_segment.append(frame_num)
-                non_face_count = 0
-            else:
-                if current_segment:
-                    if non_face_count < tolerance:
-                        current_segment.append(frame_num)
-                        non_face_count += 1
-                    else:
-                        while non_face_count > 0:
-                            if not is_face_large_enough_v2(
-                                data[str(current_segment[-1])]["face"]
-                            ):
-                                current_segment.pop()
-                                non_face_count -= 1
-                            else:
-                                break
-                        if len(current_segment) >= min_valid_frames:
-                            useful_frames.append(current_segment)
-                        current_segment = []
-                        non_face_count = 0
+    for str_frame_num in data:
+        frame_num = int(str_frame_num)
+        if data[str_frame_num]["face"] and is_face_large_enough_v2(
+                data[str_frame_num]["face"]):
+            current_segment.append(frame_num)
+            non_face_count = 0
         else:
             if current_segment:
                 if non_face_count < tolerance:
